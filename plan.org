@@ -1,0 +1,229 @@
+#+TITLE: Project Foobar
+#+DATE: <2016-05-31 Tue>
+#+AUTHOR: William Clifford
+#+EMAIL: wobh@yahoo.com
+
+* Projects
+
+Projects provide top level organization for features. Project can
+simply be a project name and a list of features required for the
+project, or it may be more expansive with a values to be filled into
+variables in the feature template.
+
+** Task list
+*** Features
+- Tasks [[*Collection]]
+  - Task [[*Item]]
+    - Text
+    - Todo/done
+** Aggregator
+*** Features
+- Subscriber [[*User]]
+  - Feeds [[*Collection]]
+    - Feed [[*Item]]
+- Publisher [[*User]]
+  - Feeds [[*Collection]]
+    - Feed [[*Item]]
+- Feed [[*Collection]]
+  - Story [[*Item]]
+  - Publisher [[*User]]
+  - Subscribers [[*Collection]]
+    - Subscribers [[*Item]]
+- Story [[*Media]]
+** Journal
+*** Features
+- Writer [[*User]]
+  - Articles [[*Collection]]
+  - Comments [[*Collection]]
+- Article [[*Media]]
+  - Writer [[*User]]
+  - Comments [[*Collection]]
+- Comment [[*Media]]
+  - Writer [[*User]]
+  - Article [[*Media]]
+** Accountant
+*** Features
+- Ledger [[*Collection]]
+  - Entry [[*Item]]
+    - debit
+    - credit
+
+** Catalog
+*** Features
+- Products [[*Collection]]
+  - Product [[*Item]]
+    - price [[*Quantity]]
+- Purchase [[*Item]]
+  - Products [[*Collection]]
+    - Product [[*Item]]
+      - Price [[*Quantity]]
+      - Discounts [[*Quantity]]
+  - Shipping [[*Quantity]]
+  - Taxes [[*Quantity]]
+  - Total [[*Quantity]]
+- Product [[*Profile]]
+- Customer [[*User]]
+  - Purchases [[*Collection]]
+    - Purchase [[*Item]]
+** Scheduler
+*** Features
+- Calendar [[*Collection]]
+  - Event [[*Item]]
+- Event [[*Profile]]
+  - Datetime [[*Datetime]]
+  - Location [[*Location]]
+  - Attendance [[*Collection]]
+    - Attendee [[*Profile]]
+- Invitation [[*Message]]
+  - Content [[*Media]]
+  - Invitees [[*Collection]]
+    - Attendee [[*Item]]
+- Attendee [[*Profile]]
+  - Attending [[*Collection]]
+    - Event [[*Item]]
+** Contacts
+*** Features
+- Search [[*Collection]]
+- List [[*Collection]]
+  - Contact [[*Profile]]
+** Inventory
+*** Features
+- Stock [[*Collection]]
+- Item [[*Item]]
+  - Amount [[*Quantity]]
+  - Location [[*Location]]
+- Orders [[*Collection]]
+  - Order [[*Item]]
+    - Amount [[*Quantity]]
+    - Datetime Received [[*Datetime]]
+    - Datetime Shipped [[*Datetime]]
+** Communications
+*** Features
+- Message [[*Message]]
+  - Content [[*Media]]
+  - From [[*User]]
+  - To [[*User]]
+  - Datetime [[*Datetime]]
+- User [[*User]]
+** Collaborate
+*** Features
+- User [[*User]]
+  - Projects [[*Collection]]
+    - Project [[*Item]]
+  - Profile [[*Profile]]
+- Project [[*Profile]]
+  - Status
+  - Owner [[*User]]
+  - Collaborators [[*Collection]]
+    - User [[*Item]]
+** Encyclopedia
+*** Features
+- Articles [[*Collection]]
+  - Article [[*Item]]
+- Article [[*Media]]
+  - 
+
+* Features
+
+Gherkin feature templates with scenarios and steps.
+
+** Collection
+*** Scenarios
+- Browse
+- Filter/Search
+- Sort
+- Size
+- Aggregate
+** Item
+*** Scenarios
+- Membership [[*Collection]]
+- Create
+- Read
+- Update
+- Delete
+** Profile
+*** Scenarios
+- Name
+- Contact info
+- Description
+- Type
+  - Product
+  - Person
+  - Organization
+- Associates [[*Collection]]
+  - [[*Profile]] [[*Item]]
+** User
+*** Scenarios
+- Signup
+- Signin
+- Access
+- [[*Profile]]
+
+** Message
+*** Scenarios
+- Contents [[*Collection]]
+  - Content [[*Item]]
+- Content [[*Media]]
+- Sender [[*User]]
+- Recipent [[*Profile]]
+- Read-status
+** Media
+*** Scenarios
+- title
+- author
+- datetime
+- size
+- type
+  - text
+    - read
+  - image
+    - view
+  - audio
+    - listen
+  - video
+    - watch
+- reference
+  - link
+  - cite
+  - 
+** Datetime
+*** Scenarios
+- local
+- remote
+** Location
+*** Scenarios
+- latitude
+- longitude
+- altitude
+- address
+- city
+- room
+- shelf
+** Label
+*** Scenarios
+- name
+- add
+- remove
+- filter
+** Quantity
+- Amount
+- Add-to
+- Take-from
+* Client
+
+- reads user and project config
+- downloads feature template
+- replaces variables with values according to
+  - project specification
+  - random generator
+- inserts filled feature into features folder
+
+* COMMENT Org settings
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 24.5.1 (Org mode 8.3.4)
+#+OPTIONS: ':nil *:t -:t ::t <:t H:6 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:nil p:nil pri:nil prop:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t

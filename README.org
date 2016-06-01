@@ -1,0 +1,71 @@
+#+TITLE: Project Foobar README
+#+DATE: <2016-05-31 Tue>
+#+AUTHOR: William Clifford
+#+EMAIL: wobh@yahoo.com
+
+* User story
+
+As a web application developer, I want a set of features and stories so
+that I can practice and improve the following application and service
+skills:
+
+  - design
+  - planning
+  - implementation
+  - testing
+  - deployment
+
+* Product requirements
+
+Provide feature descriptions:
+
+  - for features already proven useful
+  - that are reasonably well specified
+  - may be implemented in isolation or combination with others.
+  - allow derivation of automated tests
+  - implementation neutral
+    - minimally adaptible or extensible for specific language or platform
+  - congruent with community and industry best practices for
+    - secure data storage and transmission
+    - fraud and abuse prevention
+    - user privacy and confidentiality
+    - accessible and inclusive design
+    - internationalization and localization
+    - responsibilities to community and general public
+
+* Process requirements
+
+  - Provide project plans
+  - Provide feature specs in [[https://cucumber.io/docs/reference#gherkin][Gherkin]].
+  - Provide client for:
+    - downloading project plans
+    - downloading features or scenarios
+    - integrating downloaded features or scenarios into features
+      folder of project
+
+* System recommendations
+
+  - Cucumber, or Gherkin compatible testing suite for projects
+
+* Resources
+
+- [[https://www.computer.org/web/swebok][Software Engineering Body of Knowledge]], IEEE
+- [[http://www.w3.org/TR/WCAG20/][Web Content Accessibility Guidelines (WCAG) 2.0]], W3C
+- [[https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project][OWASP Application Security Verification Standard Project]], OWASP
+- [[https://www.owasp.org/index.php/OWASP_Testing_Project][OWASP Testing Guide]], OWASP
+- [[https://www.owasp.org/index.php/Category:OWASP_Guide_Project][OWASP Developer Guide]], OWASP
+- [[https://cucumber.io/docs][Cucumber documentation]], Cucumber Ltd.
+- [[http://cldr.unicode.org][Unicode Common Locale Data Repository]], Unicode Consortium
+- "Cucumbers have layers"; Livingston-Gray, Sam
+  - http://confreaks.tv/videos/rubyconf2015-cucumbers-have-layers-a-love-story
+  - http://www.slideshare.net/geeksam/cucumbers-have-layers-rubyconf-2014
+
+* COMMENT org settings
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 24.5.1 (Org mode 8.3.4)
+#+OPTIONS: ':nil *:t -:t ::nil <:t H:6 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+OPTIONS: email:nil f:t inline:t num:nil p:nil pri:nil prop:nil stat:t
+#+OPTIONS: tags:nil tasks:nil tex:t timestamp:t title:t toc:nil todo:nil |:t
